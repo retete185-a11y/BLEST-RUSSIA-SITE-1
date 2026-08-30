@@ -1,9 +1,9 @@
-```html
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
+
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
@@ -52,6 +52,7 @@
 
         <form id="applicationForm">
 
+            <!-- ИМЯ -->
 
             <label>
                 👤 Имя
@@ -64,6 +65,22 @@
                 required
             >
 
+
+            <!-- ИГРОВОЙ НИК -->
+
+            <label>
+                🎮 Игровой ник
+            </label>
+
+            <input
+                type="text"
+                id="nickname"
+                placeholder="Например: SVOYAK"
+                required
+            >
+
+
+            <!-- ВОЗРАСТ -->
 
             <label>
                 🎂 Возраст
@@ -79,6 +96,8 @@
             >
 
 
+            <!-- ИГРОВОЙ ОПЫТ -->
+
             <label>
                 🎮 Игровой опыт
             </label>
@@ -89,6 +108,8 @@
                 required
             ></textarea>
 
+
+            <!-- УСТРОЙСТВО -->
 
             <label>
                 💻 Устройство
@@ -115,102 +136,11 @@
             </select>
 
 
+            <!-- ПРИЧИНА -->
+
             <label>
                 💡 Почему хочешь стать тестером?
             </label>
 
             <textarea
-                id="reason"
-                placeholder="Напиши причину"
-                required
-            ></textarea>
-
-
-            <label>
-                ⏱ Сколько времени сможешь уделять тестированию?
-            </label>
-
-            <input
-                type="text"
-                id="time"
-                placeholder="Например: 1–2 часа в день"
-                required
-            >
-
-
-            <label>
-                📱 Telegram
-            </label>
-
-            <input
-                type="text"
-                id="telegram"
-                placeholder="@username"
-                required
-            >
-
-
-            <label class="checkbox">
-
-                <input
-                    type="checkbox"
-                    id="rules"
-                    required
-                >
-
-                <span>
-                    Я согласен соблюдать правила
-                    тестирования проекта.
-                </span>
-
-            </label>
-
-
-            <button
-                type="submit"
-                class="submit-button"
-            >
-                🚀 Отправить заявку
-            </button>
-
-
-        </form>
-
-
-        <div
-            id="success"
-            class="success-message"
-        >
-            ✅ Заявка отправлена!
-
-            <br><br>
-
-            Спасибо за участие.
-            Администрация рассмотрит твою заявку.
-        </div>
-
-
-    </div>
-
-</section>
-
-</main>
-
-
-<footer>
-
-    <h3>BLEST RUSSIA</h3>
-
-    <p>
-        © 2026 BLEST RUSSIA
-    </p>
-
-</footer>
-
-
-<script src="application.js"></script>
-
-</body>
-
-</html>
-```
+                id="
