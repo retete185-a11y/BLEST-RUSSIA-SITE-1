@@ -1,4 +1,3 @@
-```css
 * {
     margin: 0;
     padding: 0;
@@ -22,16 +21,21 @@ header {
     width: 100%;
     height: 75px;
     padding: 0 7%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    background: rgba(8, 11, 18, 0.9);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: rgba(8, 11, 18, 0.92);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
     position: fixed;
     top: 0;
+    left: 0;
+
     z-index: 100;
+
+    backdrop-filter: blur(12px);
 }
 
 .logo {
@@ -60,8 +64,8 @@ header {
 
 .telegram:hover {
     transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(39, 119, 255, 0.3);
 }
-
 
 /* HERO */
 
@@ -79,7 +83,7 @@ header {
     background:
         radial-gradient(
             circle at 50% 30%,
-            rgba(39,119,255,0.25),
+            rgba(39, 119, 255, 0.25),
             transparent 40%
         );
 }
@@ -93,13 +97,13 @@ header {
 
     padding: 8px 15px;
 
-    border: 1px solid rgba(39,119,255,0.5);
+    border: 1px solid rgba(39, 119, 255, 0.5);
 
     border-radius: 50px;
 
     color: #5c9cff;
 
-    background: rgba(39,119,255,0.08);
+    background: rgba(39, 119, 255, 0.08);
 
     font-size: 13px;
 
@@ -132,7 +136,6 @@ header {
     line-height: 1.6;
 }
 
-
 /* BUTTONS */
 
 .buttons {
@@ -164,25 +167,28 @@ header {
     background: #2777ff;
     color: white;
 
-    box-shadow: 0 10px 30px rgba(39,119,255,0.25);
+    box-shadow: 0 10px 30px rgba(39, 119, 255, 0.25);
 }
 
 .main-button:hover {
     transform: translateY(-3px);
+
+    box-shadow: 0 15px 35px rgba(39, 119, 255, 0.4);
 }
 
 .second-button {
     color: white;
 
-    border: 1px solid rgba(255,255,255,0.12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 
-    background: rgba(255,255,255,0.04);
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .second-button:hover {
-    background: rgba(255,255,255,0.08);
-}
+    background: rgba(255, 255, 255, 0.08);
 
+    transform: translateY(-3px);
+}
 
 /* ABOUT */
 
@@ -206,5 +212,387 @@ header {
 .about-text {
     max-width: 700px;
 
-    margin:
-```
+    margin: 0 auto 50px;
+
+    color: #aab1c0;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    padding: 30px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(39, 119, 255, 0.4);
+
+    background: rgba(39, 119, 255, 0.06);
+}
+
+.icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+
+    font-size: 21px;
+}
+
+.card p {
+    color: #9da5b5;
+
+    line-height: 1.6;
+}
+
+/* TESTING SECTION */
+
+.telegram-section {
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(39, 119, 255, 0.12),
+            transparent 45%
+        );
+}
+
+.telegram-section p {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    color: #aab1c0;
+
+    line-height: 1.7;
+}
+
+/* APPLICATION PAGE */
+
+.application {
+    min-height: 100vh;
+
+    padding: 130px 20px 80px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            rgba(39, 119, 255, 0.2),
+            transparent 40%
+        );
+}
+
+.application-box {
+    width: 100%;
+
+    max-width: 700px;
+
+    padding: 40px;
+
+    border-radius: 24px;
+
+    background: rgba(14, 18, 28, 0.9);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+}
+
+.application-box .label {
+    margin-bottom: 20px;
+}
+
+.application-box h1 {
+    font-size: clamp(42px, 8vw, 70px);
+
+    line-height: 0.95;
+
+    margin-bottom: 20px;
+
+    letter-spacing: -3px;
+}
+
+.application-box h1 span {
+    color: #2777ff;
+}
+
+.application-description {
+    color: #9da5b5;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+/* FORM */
+
+#applicationForm {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+#applicationForm label {
+    margin-top: 10px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #dce2ee;
+}
+
+#applicationForm input,
+#applicationForm textarea,
+#applicationForm select {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    outline: none;
+
+    background: #0a0e17;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-family: Arial, sans-serif;
+
+    transition: 0.25s;
+}
+
+#applicationForm input:focus,
+#applicationForm textarea:focus,
+#applicationForm select:focus {
+    border-color: #2777ff;
+
+    box-shadow: 0 0 0 3px rgba(39, 119, 255, 0.12);
+}
+
+#applicationForm textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+#applicationForm select {
+    cursor: pointer;
+}
+
+#applicationForm input::placeholder,
+#applicationForm textarea::placeholder {
+    color: #697386;
+}
+
+/* CHECKBOX */
+
+.checkbox {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin: 20px 0;
+
+    cursor: pointer;
+}
+
+.checkbox input {
+    width: auto !important;
+
+    margin-top: 3px;
+
+    accent-color: #2777ff;
+}
+
+.checkbox span {
+    color: #9da5b5;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+/* SUBMIT */
+
+.submit-button {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #2777ff;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow: 0 10px 30px rgba(39, 119, 255, 0.25);
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 15px 35px rgba(39, 119, 255, 0.4);
+}
+
+.submit-button:active {
+    transform: scale(0.98);
+}
+
+/* SUCCESS */
+
+.success-message {
+    display: none;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background: rgba(39, 119, 255, 0.08);
+
+    border: 1px solid rgba(39, 119, 255, 0.3);
+
+    color: #dce7ff;
+
+    line-height: 1.6;
+
+    font-size: 17px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: #06080d;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #697386;
+
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .telegram {
+        padding: 9px 14px;
+
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about h2,
+    .telegram-section h2 {
+        font-size: 32px;
+    }
+
+    .application-box {
+        padding: 25px 20px;
+
+        border-radius: 18px;
+    }
+
+    .application-box h1 {
+        letter-spacing: -2px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .main-button,
+    .second-button {
+        width: 100%;
+    }
+
+    .application {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    }
