@@ -10,18 +10,13 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-
     background: #080b12;
-
     color: white;
-
     overflow-x: hidden;
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
     width: 100%;
@@ -34,7 +29,6 @@ header {
     justify-content: space-between;
 
     position: fixed;
-
     top: 0;
     left: 0;
 
@@ -42,16 +36,15 @@ header {
 
     background: rgba(8, 11, 18, 0.92);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid
+        rgba(255, 255, 255, 0.08);
 
     backdrop-filter: blur(12px);
 }
 
 .logo {
     font-size: 23px;
-
     font-weight: 900;
-
     letter-spacing: 1px;
 }
 
@@ -61,7 +54,6 @@ header {
 
 .telegram {
     text-decoration: none;
-
     color: white;
 
     padding: 11px 20px;
@@ -84,9 +76,7 @@ header {
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
     min-height: 100vh;
@@ -94,7 +84,6 @@ header {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
@@ -161,9 +150,7 @@ header {
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTONS */
 
 .buttons {
     display: flex;
@@ -226,9 +213,7 @@ header {
 }
 
 
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT */
 
 .about {
     max-width: 1200px;
@@ -242,7 +227,8 @@ header {
 
 .about h2,
 .telegram-section h2,
-.status-section h2 {
+.status-section h2,
+.news-section h2 {
     font-size: 40px;
 
     margin-bottom: 20px;
@@ -261,9 +247,7 @@ header {
 }
 
 
-/* =========================
-   CARDS
-========================= */
+/* CARDS */
 
 .cards {
     display: grid;
@@ -317,9 +301,7 @@ header {
 }
 
 
-/* =========================
-   STATUS
-========================= */
+/* STATUS */
 
 .status-section {
     max-width: 1000px;
@@ -329,13 +311,6 @@ header {
     padding: 100px 20px;
 
     text-align: center;
-
-    background:
-        radial-gradient(
-            circle at 50% 50%,
-            rgba(39, 119, 255, 0.08),
-            transparent 55%
-        );
 }
 
 .status-description {
@@ -381,9 +356,6 @@ header {
 
     border-color:
         rgba(39, 119, 255, 0.35);
-
-    background:
-        rgba(39, 119, 255, 0.05);
 }
 
 .status-icon {
@@ -432,9 +404,149 @@ header {
 }
 
 
-/* =========================
-   TESTING
-========================= */
+/* NEWS */
+
+.news-section {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 100px 7%;
+
+    text-align: center;
+}
+
+.news-description {
+    max-width: 650px;
+
+    margin: 0 auto 45px;
+
+    color: #9da5b5;
+
+    line-height: 1.6;
+}
+
+.news-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    text-align: left;
+}
+
+.news-card {
+    min-height: 280px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.08);
+
+    transition: 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(39, 119, 255, 0.4);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.2);
+}
+
+.news-date {
+    color: #5c9cff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+.news-card h3 {
+    font-size: 21px;
+
+    margin-bottom: 15px;
+}
+
+.news-card p {
+    color: #9da5b5;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.news-tag {
+    margin-top: auto;
+
+    align-self: flex-start;
+
+    padding: 7px 10px;
+
+    border-radius: 8px;
+
+    color: #6fa5ff;
+
+    background:
+        rgba(39, 119, 255, 0.1);
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+.news-button {
+    display: inline-block;
+
+    margin-top: auto;
+
+    align-self: flex-start;
+
+    padding: 10px 14px;
+
+    border-radius: 9px;
+
+    background: #2777ff;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.news-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(39, 119, 255, 0.3);
+}
+
+
+/* TESTING */
 
 .telegram-section {
     padding: 100px 20px;
@@ -460,9 +572,7 @@ header {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
     padding: 35px 20px;
@@ -494,9 +604,7 @@ footer p {
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 800px) {
 
@@ -526,17 +634,25 @@ footer p {
         grid-template-columns: 1fr;
     }
 
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
     .about h2,
     .telegram-section h2,
-    .status-section h2 {
+    .status-section h2,
+    .news-section h2 {
         font-size: 32px;
+    }
+
+    .news-section {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
 
-/* =========================
-   SMALL MOBILE
-========================= */
+/* SMALL MOBILE */
 
 @media (max-width: 450px) {
 
@@ -582,4 +698,4 @@ footer p {
     .status-wait {
         display: none;
     }
-}
+    }
