@@ -5,8 +5,7 @@ form.addEventListener("submit", async function (event) {
     event.preventDefault();
 
     const name = document.getElementById("name").value.trim();
-    const nickname = document.getElementById("nickname").value.trim();
-    const age = Number(document.getElementById("age").value);
+    const age = document.getElementById("age").value;
     const experience = document.getElementById("experience").value.trim();
     const device = document.getElementById("device").value;
     const reason = document.getElementById("reason").value.trim();
@@ -16,7 +15,6 @@ form.addEventListener("submit", async function (event) {
 
     if (
         !name ||
-        !nickname ||
         !age ||
         !experience ||
         !device ||
@@ -29,38 +27,40 @@ form.addEventListener("submit", async function (event) {
         return;
     }
 
-    if (age < 13) {
+    if (Number(age) < 13) {
         alert("⚠️ Для участия в тестировании необходимо указать возраст 13 лет или старше.");
         return;
     }
 
-    if (!telegram.startsWith("@")) {
-        alert("⚠️ Укажи Telegram в формате @username.");
-        return;
-    }
+    const button = form.querySelector(".submit-button");
 
-    const application = {
-        name,
-        nickname,
-        age,
-        experience,
-        device,
-        reason,
-        time,
-        telegram
-    };
+    button.disabled = true;
+    button.textContent = "⏳ Отправляем...";
 
     try {
-        const response = await fetch("ТУТ_БУДЕТ_АДРЕС_BACKEND", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(application)
-        });
+        const response = await fetch(
+            "https://blestrussia.pythonanywhere.com/application",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: name,
+                    age: age,
+                    experience: experience,
+                    device: device,
+                    reason: reason,
+                    time: time,
+                    telegram: telegram
+                })
+            }
+        );
 
-        if (!response.ok) {
-            throw new Error("Ошибка сервера");
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+            throw new Error(result.message || "Ошибка отправки");
         }
 
         form.style.display = "none";
@@ -75,7 +75,10 @@ form.addEventListener("submit", async function (event) {
         console.error(error);
 
         alert(
-            "❌ Не удалось отправить заявку. Попробуй ещё раз позже."
+            "❌ Не удалось отправить заявку. Попробуй ещё раз."
         );
+
+        button.disabled = false;
+        button.textContent = "🚀 Отправить заявку";
     }
 });
